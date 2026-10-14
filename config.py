@@ -6,8 +6,8 @@ STEPPER_1_GPIOS = (17, 18, 27, 22)  # Ces GPIO pilotent le premier module ULN200
 STEPPER_2_GPIOS = (5, 6, 13, 19)  # Ces GPIO pilotent le second module ULN2003.
 
 # Positions relatives du servo, de -1 à +1.
-SERVO_GAUCHE = -0.5  # Cette valeur place le servo vers le côté gauche.
-SERVO_DROITE = 0.5  # Cette valeur place le servo vers le côté droit.
+SERVO_GAUCHE = -1  # Cette valeur place le servo vers le côté gauche.
+SERVO_DROITE = 1  # Cette valeur place le servo vers le côté droit.
 SERVO_AMPLITUDE_OSCILLATION = 0.05  # Cette valeur règle l'écart des petits mouvements.
 SERVO_TEMPS_MOUVEMENT = 0.6  # Cette durée laisse le servo atteindre sa position.
 SERVO_PAUSE = 0.5  # Cette durée sépare les mouvements du servo.

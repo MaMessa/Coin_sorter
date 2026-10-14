@@ -13,6 +13,7 @@ from config import (
     SERVO_PAUSE,
     SERVO_DROITE,
     SERVO_TEMPS_MOUVEMENT,
+    SERVO_ZERO,
 )
 
 # Les huit états commandent les bobines en mode demi-pas.
@@ -28,6 +29,12 @@ SEQUENCE_DEMI_PAS = (
 )
 
 
+def test_servo(gpio):
+    servo = Servo(gpio, min_pulse_width=0.001, max_pulse_width=0.002)
+    try:
+        servo.value = SERVO_ZERO
+    finally:
+        servo.close()
 def essayer_servo(gpio):
     """Effectue une fois le mouvement droite-gauche du servo."""
     # Le pilote génère les impulsions de commande adaptées à un servo courant.

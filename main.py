@@ -10,7 +10,7 @@ from config import (
     STEPPER_1_GPIOS,
     STEPPER_2_GPIOS,
 )
-from devices import essayer_moteur, essayer_servo
+from devices import essayer_moteur, essayer_servo, test_servo
 
 
 def main():
@@ -24,7 +24,8 @@ def main():
     # Ce cas exécute une fois le test du servo.
     if choix == "servo":
         # Le GPIO du servo est configuré dans config.py.
-        essayer_servo(SERVO_GPIO)
+        #essayer_servo(SERVO_GPIO)
+        test_servo(SERVO_GPIO)
     # Ce cas exécute une fois le premier moteur pas à pas.
     elif choix == "moteur1":
         # Le moteur 1 reçoit ses quatre GPIO et son motif réglable.

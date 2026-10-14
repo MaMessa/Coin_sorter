@@ -11,7 +11,7 @@ SERVO_DROITE = 0.5  # Cette valeur place le servo vers le côté droit.
 SERVO_AMPLITUDE_OSCILLATION = 0.05  # Cette valeur règle l'écart des petits mouvements.
 SERVO_TEMPS_MOUVEMENT = 0.6  # Cette durée laisse le servo atteindre sa position.
 SERVO_PAUSE = 0.5  # Cette durée sépare les mouvements du servo.
-
+SERVO_ZERO = 0
 # Les angles signés des deux moteurs sont exprimés en degrés.
 # Le premier moteur fait 10° dans le sens inverse choisi, puis revient de 5°.
 MOTEUR_1_MOUVEMENT_PAIRE_DEGRES = (-10.0, 5.0)

@@ -16,7 +16,7 @@ SERVO_PAUSE = 0.5  # Cette durée sépare les mouvements du servo.
 # Le premier moteur fait 10° dans le sens inverse choisi, puis revient de 5°.
 MOTEUR_1_MOUVEMENT_PAIRE_DEGRES = (-10.0, 5.0)
 # Chaque paire fait avancer le moteur de 5° nets dans le sens inverse.
-MOTEUR_1_NOMBRE_DE_PAIRES = 72
+MOTEUR_1_NOMBRE_DE_PAIRES = 72*2
 # Soixante-douze paires donnent un tour complet net de 360°.
 MOTEUR_1_MOUVEMENTS_DEGRES = MOTEUR_1_MOUVEMENT_PAIRE_DEGRES * MOTEUR_1_NOMBRE_DE_PAIRES
 MOTEUR_2_MOUVEMENTS_DEGRES = (180.0,)  # Le deuxième moteur fait un demi-tour par cycle.

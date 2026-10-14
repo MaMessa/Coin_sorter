@@ -30,7 +30,7 @@ SEQUENCE_DEMI_PAS = (
 
 
 def test_servo(gpio):
-    servo = Servo(gpio, min_pulse_width=0.001, max_pulse_width=0.002)
+    servo = Servo(gpio)
     try:
         while True:
             servo.value = SERVO_ZERO

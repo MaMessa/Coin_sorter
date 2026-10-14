@@ -32,15 +32,16 @@ SEQUENCE_DEMI_PAS = (
 def test_servo(gpio):
     servo = Servo(gpio, min_pulse_width=0.001, max_pulse_width=0.002)
     try:
-        servo.value = SERVO_ZERO
-        servo.value = SERVO_GAUCHE
-        time.sleep(2)
-        servo.value= SERVO_ZERO
-        time.sleep(2)
-        servo.value = SERVO_DROITE
-        time.sleep(2)
-        servo.value = SERVO_ZERO
-        print("Boucle terminée")
+        while True:
+            servo.value = SERVO_ZERO
+            servo.value = SERVO_GAUCHE
+            time.sleep(2)
+            servo.value= SERVO_ZERO
+            time.sleep(2)
+            servo.value = SERVO_DROITE
+            time.sleep(2)
+            servo.value = SERVO_ZERO
+            print("Boucle terminée")
     finally:
         servo.close()
 def essayer_servo(gpio):

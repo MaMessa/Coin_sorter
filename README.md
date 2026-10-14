@@ -23,7 +23,8 @@ Arrêter le mode cycle avec Ctrl+C.
 ## Réglages
 
 Modifier les angles, les positions du servo, les pauses et le délai entre demi-pas dans config.py.
-Le motif initial du moteur 1 est 4° puis -2° ; le signe négatif demande le sens inverse et reste à confirmer.
+Dans le mode cycle, le moteur 1 tourne de 360° et le moteur 2 de 180° à chaque passage.
+Ces angles sont approximatifs et peuvent nécessiter un réglage selon le moteur et son mécanisme.
 Les GPIO de la configuration utilisent la numérotation BCM.
 
 Le code ne commande pas le solénoïde.

@@ -12,9 +12,9 @@ SERVO_AMPLITUDE_OSCILLATION = 0.05  # Cette valeur règle l'écart des petits mo
 SERVO_TEMPS_MOUVEMENT = 0.6  # Cette durée laisse le servo atteindre sa position.
 SERVO_PAUSE = 0.5  # Cette durée sépare les mouvements du servo.
 
-# Le signe négatif demande le sens inverse ; le motif reste à confirmer.
-MOTEUR_1_MOUVEMENTS_DEGRES = (4.0, -2.0)  # Cette séquence reprend le motif fourni, à confirmer.
-MOTEUR_2_MOUVEMENTS_DEGRES = (180.0,)  # Cette séquence teste le demi-tour envisagé.
+# Les angles signés des deux moteurs sont exprimés en degrés.
+MOTEUR_1_MOUVEMENTS_DEGRES = (360.0,)  # Le premier moteur fait un tour complet par cycle.
+MOTEUR_2_MOUVEMENTS_DEGRES = (180.0,)  # Le deuxième moteur fait un demi-tour par cycle.
 
 # Valeur nominale approximative en demi-pas pour un tour de sortie du 28BYJ-48.
 DEMI_PAS_PAR_TOUR = 4096  # Cette valeur sert de base de conversion degrés-vers-pas.

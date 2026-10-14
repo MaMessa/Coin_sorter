@@ -2,7 +2,7 @@
 
 import time
 
-from gpiozero import OutputDevice, Servo
+from gpiozero import OutputDevice, AngularServo, Servo
 
 from config import (
     DEMI_PAS_PAR_TOUR,
@@ -14,6 +14,8 @@ from config import (
     SERVO_DROITE,
     SERVO_TEMPS_MOUVEMENT,
     SERVO_ZERO,
+    SERVO_ANGLE_DROITE,
+    SERVO_ANGLE_GAUCHE,
 )
 
 # Les huit états commandent les bobines en mode demi-pas.
@@ -30,18 +32,18 @@ SEQUENCE_DEMI_PAS = (
 
 
 def test_servo(gpio):
-    servo = Servo(gpio)
-    try:
+    servo = AngularServo(gpio, min_angle=-90, max_angle=90)
+    try :
         while True:
-            servo.value = SERVO_ZERO
-            servo.value = SERVO_GAUCHE
+            servo.angle = SERVO_ANGLE_DROITE
+            print("angle = + 90")
             time.sleep(2)
-            servo.value= SERVO_ZERO
+            print("Angle = - 90")
+            servo.angle= SERVO_ANGLE_GAUCHE
             time.sleep(2)
-            servo.value = SERVO_DROITE
+            print("Angle = 0")
+            servo.angle = 0
             time.sleep(2)
-            servo.value = SERVO_ZERO
-            print("Boucle terminée")
     finally:
         servo.close()
 def essayer_servo(gpio):

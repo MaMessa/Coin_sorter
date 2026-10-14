@@ -3,6 +3,7 @@
 import argparse
 
 from config import (
+    DELAI_MOTEUR_1,
     MOTEUR_1_MOUVEMENTS_DEGRES,
     MOTEUR_2_MOUVEMENTS_DEGRES,
     SERVO_GPIO,
@@ -27,7 +28,7 @@ def main():
     # Ce cas exécute une fois le premier moteur pas à pas.
     elif choix == "moteur1":
         # Le moteur 1 reçoit ses quatre GPIO et son motif réglable.
-        essayer_moteur(STEPPER_1_GPIOS, MOTEUR_1_MOUVEMENTS_DEGRES)
+        essayer_moteur(STEPPER_1_GPIOS, MOTEUR_1_MOUVEMENTS_DEGRES, DELAI_MOTEUR_1)
     # Ce cas exécute une fois le deuxième moteur pas à pas.
     elif choix == "moteur2":
         # Le moteur 2 doit avoir son propre module ULN2003.
@@ -39,7 +40,7 @@ def main():
             # Le servo fait d'abord son mouvement droite-gauche.
             essayer_servo(SERVO_GPIO)
             # Le premier moteur exécute le motif angulaire réglé dans config.py.
-            essayer_moteur(STEPPER_1_GPIOS, MOTEUR_1_MOUVEMENTS_DEGRES)
+            essayer_moteur(STEPPER_1_GPIOS, MOTEUR_1_MOUVEMENTS_DEGRES, DELAI_MOTEUR_1)
             # Le deuxième moteur effectue son demi-tour réglé dans config.py.
             essayer_moteur(STEPPER_2_GPIOS, MOTEUR_2_MOUVEMENTS_DEGRES)
 

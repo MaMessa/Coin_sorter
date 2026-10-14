@@ -23,8 +23,8 @@ Arrêter le mode cycle avec Ctrl+C.
 ## Réglages
 
 Modifier les angles, les positions du servo, les pauses et le délai entre demi-pas dans config.py.
-Dans le mode cycle, le moteur 1 tourne de 360° et le moteur 2 de 180° à chaque passage.
-Ces angles sont approximatifs et peuvent nécessiter un réglage selon le moteur et son mécanisme.
+Dans le mode cycle, le moteur 1 avance de 4° puis revient de 2° ; le moteur 2 tourne de 180°.
+Le délai entre les pas du moteur 1 et les pauses sont réglables dans config.py.
 Les GPIO de la configuration utilisent la numérotation BCM.
 
 Le code ne commande pas le solénoïde.

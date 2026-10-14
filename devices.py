@@ -62,7 +62,7 @@ def essayer_servo(gpio):
         servo.close()
 
 
-def essayer_moteur(gpios, mouvements_degres):
+def essayer_moteur(gpios, mouvements_degres, delai_entre_pas=DELAI_ENTRE_DEMI_PAS):
     """Exécute une séquence de rotations signées sur un 28BYJ-48."""
     # Chaque sortie commande une entrée du pilote ULN2003.
     sorties = [OutputDevice(gpio, initial_value=False) for gpio in gpios]
@@ -86,7 +86,7 @@ def essayer_moteur(gpios, mouvements_degres):
                     # La sortie suit l'état demandé par cette phase.
                     sortie.value = bool(active)
                 # Le délai règle la vitesse et laisse le moteur suivre les pas.
-                time.sleep(DELAI_ENTRE_DEMI_PAS)
+                time.sleep(delai_entre_pas)
             # La pause sépare les mouvements pour les rendre observables.
             time.sleep(PAUSE_ENTRE_MOUVEMENTS)
     finally:

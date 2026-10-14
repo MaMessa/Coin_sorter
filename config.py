@@ -13,10 +13,11 @@ SERVO_TEMPS_MOUVEMENT = 0.6  # Cette durée laisse le servo atteindre sa positio
 SERVO_PAUSE = 0.5  # Cette durée sépare les mouvements du servo.
 
 # Les angles signés des deux moteurs sont exprimés en degrés.
-MOTEUR_1_MOUVEMENTS_DEGRES = (360.0,)  # Le premier moteur fait un tour complet par cycle.
+MOTEUR_1_MOUVEMENTS_DEGRES = (-4.0, 2.0)  # Le moteur 1 avance de 4° puis revient de 2°.
 MOTEUR_2_MOUVEMENTS_DEGRES = (180.0,)  # Le deuxième moteur fait un demi-tour par cycle.
 
 # Valeur nominale approximative en demi-pas pour un tour de sortie du 28BYJ-48.
 DEMI_PAS_PAR_TOUR = 4096  # Cette valeur sert de base de conversion degrés-vers-pas.
 DELAI_ENTRE_DEMI_PAS = 0.003  # Cette durée règle la vitesse des moteurs.
-PAUSE_ENTRE_MOUVEMENTS = 0.5  # Cette durée sépare les rotations successives.
+DELAI_MOTEUR_1 = 0.002  # Cette valeur accélère le premier moteur par rapport au réglage général.
+PAUSE_ENTRE_MOUVEMENTS = 0.15  # Cette durée sépare brièvement les mouvements successifs.

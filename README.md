@@ -14,8 +14,11 @@ Lancer un seul essai à la fois depuis le dossier du projet :
     python3 main.py servo
     python3 main.py moteur1
     python3 main.py moteur2
+    python3 main.py cycle
 
 Le deuxième moteur exige son propre module ULN2003.
+Le mode cycle répète le mouvement du servo, puis celui du moteur 1, puis celui du moteur 2.
+Arrêter le mode cycle avec Ctrl+C.
 
 ## Réglages
 

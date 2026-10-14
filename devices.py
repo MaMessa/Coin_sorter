@@ -29,7 +29,7 @@ SEQUENCE_DEMI_PAS = (
 
 
 def essayer_servo(gpio):
-    """Déplace le servo à droite puis à gauche avec de petits écarts."""
+    """Effectue une fois le mouvement droite-gauche du servo."""
     # Le pilote génère les impulsions de commande adaptées à un servo courant.
     servo = Servo(gpio, min_pulse_width=0.001, max_pulse_width=0.002)
     try:
@@ -58,7 +58,7 @@ def essayer_servo(gpio):
         # Cette pause rend le dernier mouvement visible.
         time.sleep(SERVO_PAUSE)
     finally:
-        # On libère le servo à la fin de l'essai.
+        # On libère le servo même lorsque Ctrl+C interrompt la boucle.
         servo.close()
 
 

@@ -27,7 +27,7 @@ _thread = None
 def _tourner_en_continu():
     index_phase = 0
     while _en_marche.is_set():
-        index_phase = (index_phase + 1) % len(_SEQUENCE_DEMI_PAS)
+        index_phase = (index_phase - 1) % len(_SEQUENCE_DEMI_PAS)
         phase = _SEQUENCE_DEMI_PAS[index_phase]
         for sortie, active in zip(_sorties, phase):
             sortie.value = bool(active)

@@ -1,19 +1,25 @@
 """Réglages faciles à adapter après les premiers essais sur le mécanisme."""
 
 # Numéros GPIO en mode BCM, pas les numéros physiques du connecteur.
-SERVO_GPIO = 23  # Le signal du servo utilise le GPIO23.
+  # Le signal du servo utilise le GPIO23.
 STEPPER_1_GPIOS = (17, 18, 27, 22)  # Ces GPIO pilotent le premier module ULN2003.
 STEPPER_2_GPIOS = (5, 6, 13, 19)  # Ces GPIO pilotent le second module ULN2003.
 
+# ==== CONFIG SERVO 1 & 2 ==== 
 # Positions relatives du servo, de -1 à +1.
-SERVO_GAUCHE = -1  # Cette valeur place le servo vers le côté gauche.
-SERVO_DROITE = 1  # Cette valeur place le servo vers le côté droit.
-SERVO_AMPLITUDE_OSCILLATION = 0.05  # Cette valeur règle l'écart des petits mouvements.
-SERVO_TEMPS_MOUVEMENT = 0.6  # Cette durée laisse le servo atteindre sa position.
-SERVO_PAUSE = 0.5  # Cette durée sépare les mouvements du servo.
-SERVO_ZERO = 0
-SERVO_ANGLE_DROITE = 90
-SERVO_ANGLE_GAUCHE = -90
+SERVO1_GPIO = 23
+SERVO2_GPIO = 24 # !!!! à changer
+
+SERVO1_TEMPS_MOUVEMENT = 0.6  # Cette durée laisse le servo atteindre sa position.
+SERVO1_PAUSE = 0.5  # Cette durée sépare les mouvements du servo.
+SERVO1_ZERO = 0
+SERVO1_ANGLE_DROITE = 90
+SERVO1_ANGLE_GAUCHE = -90
+
+
+
+
+# ===== MOTEUR 1 ======
 # Les angles signés des deux moteurs sont exprimés en degrés.
 # Le premier moteur fait 10° dans le sens inverse choisi, puis revient de 5°.
 MOTEUR_1_MOUVEMENT_PAIRE_DEGRES = (-10.0, 5.0)

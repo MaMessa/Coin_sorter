@@ -7,7 +7,7 @@ STEPPER_2_GPIOS = (5, 6, 13, 19)  # Ces GPIO pilotent le second module ULN2003.
 
 # ==== CONFIG SERVO 1 & 2 ==== 
 # Positions relatives du servo, de -1 à +1.
-SERVO1_GPIO = 23
+SERVO1_GPIO = 12
 SERVO2_GPIO = 24 # !!!! à changer
 
 SERVO1_TEMPS_MOUVEMENT = 0.6  # Cette durée laisse le servo atteindre sa position.

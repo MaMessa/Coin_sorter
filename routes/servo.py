@@ -14,6 +14,7 @@ class ResultatDetection(BaseModel):
 def recevoir_resultat(donnee: ResultatDetection):
     if donnee.result == "euro":
         tourner_gauche()
+        print("doit tourner à gauche")
     elif donnee.result == "paseuro":
         tourner_droite()
     else:

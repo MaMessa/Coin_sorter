@@ -13,7 +13,12 @@ from config import (
     SERVO1_PAUSE,
 )
 
-servo1 = AngularServo(SERVO1_GPIO, min_angle=-90, max_angle=90)
+servo1 = AngularServo(SERVO1_GPIO,
+                    min_angle=-90,
+                    max_angle=90,
+                    min_pulse_width=0.001,
+                    max_pulse_width=0.002,
+                    frame_width=0.010,)
 # Ce verrou sérialise les mouvements : une requête qui arrive pendant un
 # mouvement en cours attend simplement que le verrou se libère.
 _verrou_servo1 = threading.Lock()

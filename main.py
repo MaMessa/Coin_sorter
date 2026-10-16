@@ -2,17 +2,17 @@
 from fastapi import FastAPI
 from gpiozero import AngularServo
 
-from config import SERVO2_GPIO
+
 from routes.servo import router as servo_router
 from routes.moteur import router as moteur_router
-
+from routes.servo2 import router as servo2_router
 # Création du serveur API
 app = FastAPI()
 app.include_router(servo_router)
 app.include_router(moteur_router)
+app.include_router(servo2_router)
 
 # Initialisation du servo2 (en attente d'intégration).
-servo2 = AngularServo(SERVO2_GPIO, min_angle=-90, max_angle=90)
 
 
 def main():

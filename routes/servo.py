@@ -21,3 +21,5 @@ def recevoir_resultat(donnee: ResultatDetection):
     else:
         raise HTTPException(status_code=400, detail="Valeur de result inconnue")
     return {"status": "ok"}
+
+
